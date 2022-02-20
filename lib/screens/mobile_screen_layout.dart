@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui_clone/colors.dart';
+import 'package:whatsapp_ui_clone/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -9,6 +11,8 @@ class MobileScreenLayout extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: appBarColor,
+          elevation: 0,
           title: const Text(
             'Whatsapp',
             style: TextStyle(
@@ -28,18 +32,27 @@ class MobileScreenLayout extends StatelessWidget {
               icon: const Icon(Icons.more_vert, color: Colors.grey),
             ),
           ],
-          bottom: const TabBar(tabs: [
-            Tab(
-              text: 'CHATS',
-            ),
-            Tab(
-              text: 'ESTADOS',
-            ),
-            Tab(
-              text: 'LLAMADAS',
-            ),
-          ]),
+          bottom: const TabBar(
+              indicatorColor: tabColor,
+              indicatorWeight: 4,
+              labelColor: tabColor,
+              unselectedLabelColor: Colors.grey,
+              labelStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+              tabs: [
+                Tab(
+                  text: 'CHATS',
+                ),
+                Tab(
+                  text: 'ESTADOS',
+                ),
+                Tab(
+                  text: 'LLAMADAS',
+                ),
+              ]),
         ),
+        body: const ContactsList(),
       ),
     );
   }
