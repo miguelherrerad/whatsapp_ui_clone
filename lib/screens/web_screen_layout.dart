@@ -9,8 +9,8 @@ import 'package:whatsapp_ui_clone/widgets/sender_message_card.dart';
 import 'package:whatsapp_ui_clone/widgets/web_profile_bar.dart';
 import 'package:whatsapp_ui_clone/widgets/web_search_bar.dart';
 
-class WebLayoutScreen extends StatelessWidget {
-  const WebLayoutScreen({Key? key}) : super(key: key);
+class WebScreenLayout extends StatelessWidget {
+  const WebScreenLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
